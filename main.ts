@@ -4,9 +4,21 @@ input.onButtonPressed(Button.A, function () {
         basic.showIcon(IconNames.SmallDiamond)
     }
     if (Math.randomBoolean()) {
-        basic.showIcon(IconNames.QuarterNote)
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
     } else {
-        basic.showIcon(IconNames.EigthNote)
+        basic.showLeds(`
+            # . # . #
+            . . . . .
+            # . . . #
+            . . . . .
+            # . # . #
+            `)
     }
 })
 basic.showString("Coin Flipper")
